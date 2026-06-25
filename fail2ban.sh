@@ -22,7 +22,7 @@ echo "=== Создание конфигурации jail.local ==="
 sudo tee /etc/fail2ban/jail.local > /dev/null << 'EOF'
 [DEFAULT]
 # Белый список (свои IP добавьте обязательно!)
-ignoreip = 127.0.0.1/8 ::1 192.168.1.0/24 95.25.145.250
+ignoreip = 127.0.0.1/8 ::1 192.168.1.0/24 
 
 # Время блокировки (3 часа)
 bantime = 3h
@@ -37,8 +37,8 @@ maxretry = 5
 #action = %(action_mwl)s
 
 # Кому отправлять уведомления
-#destemail = juhnsooqa@gmail.com
-#sender = fail2ban@noclip.network
+#destemail = test@example.com
+#sender = sender@example.com
 
 [sshd]
 enabled = true
